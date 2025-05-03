@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import BookCover from "@/components/BookCover";
 import QuoteSection from "@/components/QuoteSection";
@@ -6,14 +5,11 @@ import FeatureSection from "@/components/FeatureSection";
 import AuthorSection from "@/components/AuthorSection";
 import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
   useEffect(() => {
     document.title = "SOBRECARGA | Nathan Maestrello | Lançamento";
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-100 to-white py-12 md:py-20">
         <div className="container mx-auto px-4">
@@ -37,12 +33,9 @@ const Index = () => {
                     ✓ Descubra ferramentas práticas para recuperar sua energia<br />
                     ✓ Aprenda a estabelecer limites saudáveis em todas as áreas
                   </p>
-                  <Button 
-                    className="bg-bookBlack hover:bg-bookBlack/80 text-white font-bold py-6 px-8 text-lg transition-all animate-pulse-slow"
-                    onClick={() => {
-                      window.location.href = "https://nathanmaestrello.com.br/finalizar-compra/?add-to-cart=226";
-                    }}
-                  >
+                  <Button className="bg-bookBlack hover:bg-bookBlack/80 text-white font-bold py-6 px-8 text-lg transition-all animate-pulse-slow" onClick={() => {
+                  window.location.href = "https://nathanmaestrello.com.br/finalizar-compra/?add-to-cart=226";
+                }}>
                     QUERO MEU EXEMPLAR!
                   </Button>
                 </div>
@@ -73,18 +66,12 @@ const Index = () => {
       <footer className="bg-bookBlack text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center mb-4">
-            <img 
-              src="/lovable-uploads/c700d0c8-9f99-4000-86ae-d00f6f1938e8.png" 
-              alt="Autor da Fé Logo"
-              className="h-12"
-            />
+            <img alt="Autor da Fé Logo" className="h-12" src="/lovable-uploads/fcbaf3d5-a692-4366-9a20-08b5d5ac8ab1.png" />
           </div>
           <p className="mb-2">© {new Date().getFullYear()} SOBRECARGA - Todos os direitos reservados</p>
           <p className="text-sm opacity-75">Nathan Maestrello | Autor da Fé</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
