@@ -1,5 +1,5 @@
 
-import { book } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 const QuoteSection = () => {
   return (
@@ -7,7 +7,7 @@ const QuoteSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-6">
           <div className="flex items-center gap-2">
-            <book className="h-6 w-6" />
+            <BookOpen className="h-6 w-6" />
             <span className="font-title uppercase text-xl tracking-wide">Uma mensagem para você</span>
           </div>
         </div>
