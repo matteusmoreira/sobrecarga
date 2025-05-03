@@ -40,10 +40,10 @@ const Index = () => {
                   <Button 
                     className="bg-bookBlack hover:bg-bookBlack/80 text-white font-bold py-6 px-8 text-lg transition-all animate-pulse-slow"
                     onClick={() => {
-                      document.getElementById('cta-section')?.scrollIntoView({ behavior: 'smooth' });
+                      window.location.href = "https://nathanmaestrello.com.br/finalizar-compra/?add-to-cart=226";
                     }}
                   >
-                    QUERO CONHECER O LIVRO
+                    QUERO MEU EXEMPLAR!
                   </Button>
                 </div>
               </div>
