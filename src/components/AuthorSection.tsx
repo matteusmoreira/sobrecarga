@@ -16,9 +16,7 @@ const AuthorSection = () => {
               <p className="mb-4">
                 Em "SOBRECARGA", Nathan compartilha estratégias comprovadas e histórias inspiradoras que têm ajudado milhares de pessoas a transformarem suas vidas, encontrando equilíbrio em meio ao caos da vida moderna.
               </p>
-              <p>
-                Seu trabalho como Autor da Fé tem impactado positivamente inúmeras vidas, combinando princípios de fé com abordagens científicas para o bem-estar integral.
-              </p>
+              <p>Além de sua missão ministerial e educacional, Nathan é casado com Caroline Maestrello e pai orgulhoso de Pedro e Emanuely — sua maior fonte de amor e inspiração diária. Se você busca não apenas conhecimento, mas transformação verdadeira, está no lugar certo.</p>
             </div>
           </div>
         </div>
