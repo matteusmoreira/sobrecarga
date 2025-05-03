@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import BookCover from "@/components/BookCover";
 import QuoteSection from "@/components/QuoteSection";
@@ -66,7 +67,7 @@ const Index = () => {
       <footer className="bg-bookBlack text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center mb-4">
-            <img alt="Autor da Fé Logo" className="h-12" src="/lovable-uploads/fcbaf3d5-a692-4366-9a20-08b5d5ac8ab1.png" />
+            <img alt="Autor da Fé Logo" className="h-20" src="/lovable-uploads/fcbaf3d5-a692-4366-9a20-08b5d5ac8ab1.png" />
           </div>
           <p className="mb-2">© {new Date().getFullYear()} SOBRECARGA - Todos os direitos reservados</p>
           <p className="text-sm opacity-75">Nathan Maestrello | Autor da Fé</p>
