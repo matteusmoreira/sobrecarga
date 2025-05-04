@@ -1,20 +1,21 @@
-
-
-import { useEffect } from "react";
-import BookCover from "@/components/BookCover";
-import QuoteSection from "@/components/QuoteSection";
-import FeatureSection from "@/components/FeatureSection";
-import AuthorSection from "@/components/AuthorSection";
-import CTASection from "@/components/CTASection";
+import { useEffect, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
+import BookCover from "@/components/BookCover";
+
+// Lazy load components that aren't immediately visible in the viewport
+const QuoteSection = lazy(() => import("@/components/QuoteSection"));
+const FeatureSection = lazy(() => import("@/components/FeatureSection"));
+const AuthorSection = lazy(() => import("@/components/AuthorSection"));
+const CTASection = lazy(() => import("@/components/CTASection"));
 
 const Index = () => {
   useEffect(() => {
     document.title = "SOBRECARGA | Nathan Maestrello | Lançamento";
   }, []);
 
-  return <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
+  return (
+    <div className="min-h-screen flex flex-col">
+      {/* Hero Section - Keep this eagerly loaded */}
       <section className="bg-gradient-to-b from-gray-100 to-white py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
@@ -38,8 +39,8 @@ const Index = () => {
                     ✓ Aprenda a estabelecer limites saudáveis em todas as áreas
                   </p>
                   <Button className="bg-bookBlack hover:bg-bookBlack/80 text-white font-bold py-6 px-8 text-lg transition-all animate-pulse-slow" onClick={() => {
-                  window.location.href = "https://nathanmaestrello.com.br/finalizar-compra/?add-to-cart=226";
-                }}>
+                    window.location.href = "https://nathanmaestrello.com.br/finalizar-compra/?add-to-cart=226";
+                  }}>
                     QUERO MEU EXEMPLAR!
                   </Button>
                 </div>
@@ -52,19 +53,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Quote Section */}
-      <QuoteSection />
-
-      {/* Features Section */}
-      <FeatureSection />
-      
-      {/* Author Section */}
-      <AuthorSection />
-      
-      {/* CTA Section */}
-      <section id="cta-section">
-        <CTASection />
-      </section>
+      {/* Lazy load sections that are below the fold */}
+      <Suspense fallback={<div className="py-16 text-center">Carregando...</div>}>
+        <QuoteSection />
+        <FeatureSection />
+        <AuthorSection />
+        <section id="cta-section">
+          <CTASection />
+        </section>
+      </Suspense>
       
       {/* Footer */}
       <footer className="bg-bookBlack text-white py-8">
@@ -76,7 +73,8 @@ const Index = () => {
           <p className="text-sm opacity-75">Nathan Maestrello | Autor da Fé</p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
 
 export default Index;
