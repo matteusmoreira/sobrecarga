@@ -1,4 +1,6 @@
+
 import { BookOpen } from "lucide-react";
+
 const features = [{
   title: "Experiência Universal",
   description: "A sobrecarga é uma experiência universal, mas profundamente pessoal, que afeta milhões de pessoas ao redor do mundo."
@@ -6,9 +8,10 @@ const features = [{
   title: "Combinação de Fé e Ciência",
   description: "Este livro revela a verdade sobre o esgotamento e mostra como você pode se libertar antes que seja tarde demais."
 }, {
-  title: "Prefácio de Julio Ventullo",
-  description: "Uma introdução especial escrita por Julio Ventullo, que traz uma perspectiva única sobre os temas abordados no livro."
+  title: "Prefácio de Julio Vertullo",
+  description: "Uma introdução especial escrita por Julio Vertullo, que traz uma perspectiva única sobre os temas abordados no livro."
 }];
+
 const FeatureSection = () => {
   return <div className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -32,4 +35,5 @@ const FeatureSection = () => {
       </div>
     </div>;
 };
+
 export default FeatureSection;

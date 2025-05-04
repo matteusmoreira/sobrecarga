@@ -1,4 +1,5 @@
 
+
 import { useEffect } from "react";
 import BookCover from "@/components/BookCover";
 import QuoteSection from "@/components/QuoteSection";
@@ -6,10 +7,12 @@ import FeatureSection from "@/components/FeatureSection";
 import AuthorSection from "@/components/AuthorSection";
 import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
+
 const Index = () => {
   useEffect(() => {
     document.title = "SOBRECARGA | Nathan Maestrello | Lançamento";
   }, []);
+
   return <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-100 to-white py-12 md:py-20">
@@ -75,4 +78,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
